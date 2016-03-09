@@ -17,6 +17,8 @@ android {
             applicationId "com.udacity.gradle.builditbigger.free"
             dependencies {
                 compile 'com.google.android.gms:play-services:7.5.0'
+                compile 'com.android.support:appcompat-v7:23.1.1'
+                compile fileTree(dir: 'libs', include: ['*.jar'])
             }
             buildConfigField 'boolean', 'PAID_VERSION',"false"
 
@@ -39,10 +41,6 @@ android {
 
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    // Added for AdMob
-    compile project(':javaJokes')
     compile project(':jokeslibraryjj')
-    compile 'com.android.support:appcompat-v7:23.1.1'
     compile project(path: ':backendjokes', configuration: 'android-endpoints')
 }

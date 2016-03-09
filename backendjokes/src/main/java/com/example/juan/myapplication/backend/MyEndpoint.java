@@ -9,9 +9,9 @@ package com.example.juan.myapplication.backend;
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiNamespace;
+import com.udacity.gradle.jokes.Joker;
 
 import javax.inject.Named;
-import com.udacity.gradle.jokes.Joker;
 /**
  * An endpoint class we are exposing
  */
@@ -24,7 +24,7 @@ public class MyEndpoint {
     @ApiMethod(name = "sayHi")
     public MyBean sayHi(@Named("name") String name) {
         MyBean response = new MyBean();
-        response.setData(new Joker().getJoke()+"This is even a worse joke, when is told by "+name+;
+        response.setData(new Joker().getJoke()+"This is even a worse joke, when is told by "+name);
 
         return response;
     }
